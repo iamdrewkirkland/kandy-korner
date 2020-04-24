@@ -1,6 +1,9 @@
 import React from "react";
 import LocationList from "./components/locations/LocationList";
 import { LocationProvider } from "./components/locations/locationProvider";
+import { ProductProvider } from "./components/products/productProvider";
+import { ProductTypeProvider } from "./components/products/productTypeProvider";
+import ProductList from "./components/products/ProductList";
 
 export default () => (
   <>
@@ -10,5 +13,10 @@ export default () => (
     <LocationProvider>
       <LocationList />
     </LocationProvider>
+    <ProductProvider>
+      <ProductTypeProvider>
+        <ProductList />
+      </ProductTypeProvider>
+    </ProductProvider>
   </>
 );
